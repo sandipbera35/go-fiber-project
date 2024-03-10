@@ -4,11 +4,16 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/sandipbera35/go-fiber-project.git/database"
 )
 
 type Data struct {
 	Name  string
 	Email string
+}
+
+func init() {
+	database.Migrator()
 }
 
 func main() {
